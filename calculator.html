@@ -7,20 +7,70 @@
         <meta http-equiv="X-UA-Compatible" content="ie-edge">
         <link rel="stylesheet" href="style.css">
         <h1 id="Name" class="content">Number Calculator</h1>
-        <script> function addNum(){
-            var val1 = parseInt(document.getElementById("value1").value);
-            var val2 = parseInt(document.getElementById("value2").value);
-            var ansD = document.getElementById("answer");
-            ansD.value = val1+val2;
-        }
-        </script>
+        <style type text"text/css">
+            label{
+    width:100px;
+    display:inline-block;
+    }
+        </style>
     </head>
     <body>
+        <script>
+        function AddNum(){
+            var val1 = parseInt(document.getElementById("value1").value);
+            var val2 = parseInt(document.getElementById("value2").value);
+            var ansD = document.getElementById("answer1");
+            ansD.value = val1+val2;
+        }    
+        function SubNum(){
+            var val3 = parseInt(document.getElementById("value3").value);
+            var val4 = parseInt(document.getElementById("value4").value);
+            var ansD = document.getElementById("answer2");
+            ansD.value = val3-val4;
+        }
+        function MultNum(){
+            var val5 = parseInt(document.getElementById("value5").value);
+            var val6 = parseInt(document.getElementById("value6").value);
+            var ansD = document.getElementById("answer3");
+            ansD.value = val5*val6;
+        }
+        function DivNum(){
+            var val7 = parseInt(document.getElementById("value7").value);
+            var val8 = parseInt(document.getElementById("value8").value);
+            var ansD = document.getElementById("answer4");
+            ansD.value = val7/val8;
+        }
+    </script>
+      <div>
+        <label>Add:</label> 
+        <input type="text" name="value1" value="" id="value1">
+        + <input type="text" name="value2" value="" id="value2">
+        = <input type="text" id="answer1" name="answer1" value="">
+        <input type="button" id="answer1" value="calculate" name="submit" onclick="AddNum()">
+     </div>
+     <p>&nbsp</p>
         <div>
-            <input type="text" name="value1" value="" id="value1">
-            + <input type="text" name="value2" value="" id="value2">
-            = <input type="text" id="answer" name="answer" value="">
-            <input type="button" id="answer" value="calculate" name="submit" onclick="addNum()">
+            <label>Subtract:</label>
+            <input type="text" name="value3" value="" id="value3">
+            - <input type="text" name="value4" value="" id="value4">
+            = <input type="text" id="answer2" name="answer2" value="">
+            <input type="button" id="answer2" value="calculate" name="submit" onclick="SubNum()">
+        </div>
+        <p>&nbsp</p>
+        <div>
+            <label>Multiply:</label>
+            <input type="text" name="value5" value="" id="value5">
+            * <input type="text" name="value6" value="" id="value6">
+            = <input type="text" id="answer3" name="answer3" value="">
+            <input type="button" id="answer3" value="calculate" name="submit" onclick="MultNum()">
+        </div>
+        <p>&nbsp</p>
+        <div>
+            <label>Divide:</label> 
+            <input type="text" name="value7" value="" id="value7">
+            / <input type="text" name="value8" value="" id="value8">
+            = <input type="text" id="answer4" name="answer4" value="">
+            <input type="button" id="answer4" value="calculate" name="submit" onclick="DivNum()">
         </div>
     </body>
 </html>
